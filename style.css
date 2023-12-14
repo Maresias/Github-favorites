@@ -11,6 +11,7 @@
     font-size: 62.5%;
 
     --color-txt-:#343232;
+    --color-primary:#0da0ea;
 }
 
 .sr-only{
@@ -37,13 +38,96 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    margin-bottom: 2.2rem;
 }
 
+header h1{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}    
 #app{
     max-width: 500px;
     margin: 0 auto;
 
     padding: 2rem;
+}
+
+
+.wrapper-input{
+    display: flex;
+}    
+
+.wrapper-input input{
+    padding: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: .4rem 0 0 .4rem;
+}    
+
+.wrapper-input button{
+    padding: 1.2rem;
+    background-color:var(--color-primary);
+    border: none;
+    border-radius: 0 .4rem .4rem 0 ;
+
+    cursor: pointer;
+    transition: 0.7s;
+}    
+
+.wrapper-input button:hover{
+   
+    filter: brightness(1.4);
+}
+
+table{
+    border-collapse: collapse;
+
+}
+
+thead tr{
+    background-color: var(--color-primary);
+    text-align: left;
+    
+}
+
+thead tr :first-child{
+    border-radius: .4rem 0 0 ;
+}
+
+thead tr :last-child{
+    border-radius: 0 .4rem 0 0 ;
+}
+
+thead th{
+    padding: 1.6rem 1.6rem 1.6rem 2rem;
+    font-weight: 400;
+}
+
+tbody :nth-child(odd){
+    background-color: #ccc;
+}
+tbody tr{
+    background-color: red;
+}
+
+
+
+
+td.user img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user{
+    display: flex;
+    gap: 2rem;
+}
+td.user a{
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+td.user p{
+    font-weight: 600;
 }
 
