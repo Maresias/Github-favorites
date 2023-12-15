@@ -102,11 +102,24 @@ thead th{
     font-weight: 400;
 }
 
-tbody :nth-child(odd){
-    background-color: #ccc;
+tbody tr:nth-child(odd){
+    background-color: #ebe8e8;
 }
 tbody tr{
-    background-color: red;
+    background-color: #d8d2d2fc;
+   
+}
+
+tbody td{
+    padding: 1.6rem 1.6rem 1.6rem 2rem;
+}
+
+tbody button{
+    background: none;
+    border: none;
+    color: red;
+    font-size: 1.6rem;
+    cursor: pointer;
 }
 
 
