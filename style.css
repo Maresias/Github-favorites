@@ -120,10 +120,8 @@ tbody button{
     color: red;
     font-size: 1.6rem;
     cursor: pointer;
+    padding: .3rem;
 }
-
-
-
 
 td.user img{
     width: 5rem;
