@@ -80,6 +80,7 @@ header h1{
 
 table{
     border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 }
 
