@@ -17,7 +17,10 @@ export  class FavoritesView extends Favorites {
 
     update(){
         this.removeAllTr()
+
     }
+
+    crea
 
     removeAllTr(){
         const tbody = this.root.querySelector('table tbody')
