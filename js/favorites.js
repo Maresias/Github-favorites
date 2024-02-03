@@ -18,10 +18,10 @@ export class Favorites {
             },
 
             {
-                login:'may',
-                name:'Brito',
-                public_repos: '7',
-                followers: '17'
+                login:'AlexandreRCS',
+                name:'Alexandre',
+                public_repos: '47',
+                followers: '137'
             }
         ]
 
