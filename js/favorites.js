@@ -8,22 +8,27 @@ export class Favorites {
     }
 
     load(){
-        this.entries =  [
 
-            {
-                login:'maykbrito',
-                name:'Mayk Brito',
-                public_repos: '77',
-                followers: '137'
-            },
+        this.entries = JSON.parse
+        (localStorage.getItem('@github-favorites:')) || []
 
-            {
-                login:'AlexandreRCS',
-                name:'Alexandre',
-                public_repos: '47',
-                followers: '137'
-            }
-        ]
+        console.log(this.entries)
+        // this.entries =  [
+
+        //     {
+        //         login:'maykbrito',
+        //         name:'Mayk Brito',
+        //         public_repos: '77',
+        //         followers: '137'
+        //     },
+
+        //     {
+        //         login:'AlexandreRCS',
+        //         name:'Alexandre',
+        //         public_repos: '47',
+        //         followers: '137'
+        //     }
+        // ]
 
     }
 
@@ -31,7 +36,8 @@ export class Favorites {
         const filteredEntries = this.entries
         .filter(entry => entry.login !== user.login)
 
-        console.log(filteredEntries)
+        this.entries = filteredEntries
+        this.update()
     }
     
 }
