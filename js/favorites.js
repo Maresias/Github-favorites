@@ -26,6 +26,14 @@ export class Favorites {
         ]
 
     }
+
+    delete(user){
+        const filteredEntries = this.entries
+        .filter(entry => entry.login !== user.login)
+
+        console.log(filteredEntries)
+    }
+    
 }
 
 // CLASS QUE VAI CRIAR A VISUALIZAÇÃO E EVENTO DO HTML
@@ -52,6 +60,14 @@ export  class FavoritesView extends Favorites {
             row.querySelector('.repositories').textContent = user.public_repos
             row.querySelector('.followers').textContent = user.followers
 
+            row.querySelector('.remove').onclick =() => {
+
+                const isOk = confirm('tem certeza que deseja excluir essa linha?')
+
+                if(isOk){
+                    this.delete(user)
+                }
+            }
 
             this.tbody.append(row)
         })
