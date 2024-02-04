@@ -1,3 +1,21 @@
+//CLASSE QUE VAI CONTER A  LOGICA DE DADOS
+export class githubUser{
+    static search(username){
+        const endpoint = `https://api.github.com/users/${username}`
+
+        return fetch(endpoint)
+        .then(data => data.json())
+        .then(
+            ({login, name, public_repos, followers}) => ({
+                login,
+                name,
+                public_repos,
+                followers
+            })
+        )
+    }
+}
+
 // COMO OS DADOS SERÃO ESTRUTURADOS
 
 export class Favorites {
@@ -5,6 +23,8 @@ export class Favorites {
         this.root = document.querySelector(root)
 
         this.load()
+
+        githubUser.search('maykbrito').then(cu => console.log(cu))
     }
 
     load(){
@@ -12,7 +32,6 @@ export class Favorites {
         this.entries = JSON.parse
         (localStorage.getItem('@github-favorites:')) || []
 
-        console.log(this.entries)
         // this.entries =  [
 
         //     {
